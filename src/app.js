@@ -53,6 +53,7 @@ window.onload = function() {
   bottomvalue.querySelector("p").innerHTML=rcard.palo.simbolo;
   bottomvalue.querySelector("p").style.color=rcard.palo.color;
   bottomvalue.querySelector("p").style.fontSize="xx-large";
+  bottomvalue.querySelector("p").style.rotate="180deg";
 };
 
 
