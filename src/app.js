@@ -16,10 +16,10 @@ class Palo{
     this.color=color
   }
 }
-const corazones=new Palo("♥","danger");
-const diamantes=new Palo("♦","danger");
-const picas=new Palo("♠","dark");
-const treboles=new Palo("♣", "dark");
+const corazones=new Palo("♥","red");
+const diamantes=new Palo("♦","red");
+const picas=new Palo("♠","black");
+const treboles=new Palo("♣", "black");
 
 const palos=[corazones, diamantes, picas, treboles];
 
@@ -41,6 +41,18 @@ window.onload = function() {
 
   const rcard=new Card(randomvalues(palos), randomvalues(valores))
   console.log(rcard)
+  //document.getElementById("topP").innerHTML = rcard.valor;
+  let topvalue=document.getElementById("top");
+  topvalue.querySelector("p").innerHTML=rcard.palo.simbolo;
+  topvalue.querySelector("p").style.color=rcard.palo.color;
+  topvalue.querySelector("p").style.fontSize="xx-large";
+  let palo=document.getElementById("center");
+  palo.querySelector("p").innerHTML=rcard.valor;
+  palo.querySelector("p").style.fontSize="xx-large";
+  let bottomvalue=document.getElementById("bottom");
+  bottomvalue.querySelector("p").innerHTML=rcard.palo.simbolo;
+  bottomvalue.querySelector("p").style.color=rcard.palo.color;
+  bottomvalue.querySelector("p").style.fontSize="xx-large";
 };
 
 
